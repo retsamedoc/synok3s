@@ -1,4 +1,15 @@
 # Synok3s
+
+## Gotchas
+
+DSM 6.2.4 has iptables 1.6.0 installed. K3s does not like this version and it does not have the xt_comment capability.
+Will need to rebuild iptables and several kernel modules. Would be nice to rebuild the kernel itself to add 
+
+DSM 7.0 uses iptables 1.8.3 (much better)
+
+## Prereqs
+
+
 ## K3S on Synology DSxxx NAS
 
 Based on: https://medium.com/@marco.mezzaro/k3s-on-synology-what-if-it-works-e980b4b09fcb
@@ -74,5 +85,25 @@ for troubleshooting check dmesg for errors.
 
 ## Links
 
+## Specific practice sharing
+
+* [v2rayA transparent proxy mode](https://github.com/sjtuross/syno-iptables/wiki/v2rayA transparent proxy mode)
+* [Docker install OpenWrt bypass by](https://github.com/sjtuross/syno-iptables/wiki/Docker install OpenWrt bypass)
+* [Native Docker IPv6 NAT Mode (DSM 6)](https://github.com/sjtuross/syno-iptables/wiki/Native Docker-IPv6-NAT Mode-(DSM-6))
+* [Native Docker IPv6 NAT Mode (DSM 7)](https://github.com/sjtuross/syno-iptables/wiki/Native Docker-IPv6-NAT Mode-(DSM-7))
+
+## grateful
+
+* [Deploying a bypass transparent proxy for IPv6, Fullcone NAT in Synology](https://blog.kaaass.net/archives/1576)
+* [spksrc - a cross compilation framework](https://github.com/SynoCommunity/spksrc)
+* [fix synology docker ipv6 issue](https://github.com/wangliangliang2/fix_synology_docker_ipv6)
+
+- https://github.com/sjtuross/syno-iptables/wiki/v2rayA%E9%80%8F%E6%98%8E%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F
+- https://github.com/sjtuross/syno-iptables/wiki/Docker%E5%AE%89%E8%A3%85OpenWrt%E6%97%81%E8%B7%AF%E7%94%B1
+- https://github.com/sjtuross/syno-iptables/wiki/%E5%8E%9F%E7%94%9FDocker-IPv6-NAT%E6%A8%A1%E5%BC%8F-(DSM-6)
+- https://github.com/sjtuross/syno-iptables/wiki/%E5%8E%9F%E7%94%9FDocker-IPv6-NAT%E6%A8%A1%E5%BC%8F-(DSM-7)
+- https://blog.kaaass.net/archives/1576
+- https://github.com/SynoCommunity/spksrc
+- https://github.com/wangliangliang2/fix_synology_docker_ipv6
 - http://billauer.co.il/blog/2013/10/version-magic-insmod-modprobe-force/
 - https://stackoverflow.com/questions/9341701/cross-compiling-a-kernel-module-invalid-module-format
